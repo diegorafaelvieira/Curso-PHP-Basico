@@ -11,6 +11,13 @@ if(isset($_SESSION['mensagem'])): ?>
 	};
 </script>
 
+<script>
+	// Input layout correto
+	$(document).ready(function() {
+   M.updateTextFields();
+});
+</script>
+
 <?php
 endif;
 session_unset();

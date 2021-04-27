@@ -1,0 +1,26 @@
+<?php
+  // Manipulação de Arquivos
+  /*
+  fopen()
+  fclose()
+  fwrite()
+  !feof()
+  fgets()
+  filesize
+  */
+
+  $arquivo = 'arquivo.txt';
+  $conteudo = "Conteudo de teste\r\n";
+  $tamanhoArquivo = filesize($arquivo);
+
+  $arquivoAberto = fopen($arquivo, 'r');
+  //fwrite($arquivoAberto, $conteudo); insiro dados no arquivo
+
+  while(!feof($arquivoAberto)):
+    $linha = fgets($arquivoAberto, $tamanhoArquivo);
+    echo $linha."<br>";
+  endwhile;  
+
+  fclose($arquivoAberto);
+
+?>

@@ -3,6 +3,7 @@
 include_once 'php_action/db_connect.php';
 //Header
 include_once 'includes/header.php';
+include_once 'includes/mensagem.php';
 // Select
 if(isset($_GET['id'])):
   $id = mysqli_escape_string($connect, $_GET['id']);
